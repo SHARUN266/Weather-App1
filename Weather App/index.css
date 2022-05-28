@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmVhY2glMjBiYWNrZ3JvdW5kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1000");
+   
+    background-size: cover;
+    overflow: hidden;
+    height: 100vh;
+    background-repeat: no-repeat;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+#container{
+    padding: 20px 70px ;
+    color: #fff;
+}
+.current-info{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.date-con .time{
+    font-size: 4rem;
+    font-weight: 150;
+}
+.date-con .time .am-pm{
+    font-size: 2rem;
+}
+
+.date-con .date{
+    font-weight: 200;
+    font-size: 2rem;
+}
+
+.place-con{
+    text-align: end;
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+
+.future-for{
+    background: rgba(24,24,27,0.8);
+    padding: 25px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    color:white;
+    width: 100%;
+    height: 200px;
+    align-items: center;
+    justify-content: start;
+    overflow-y: hidden;
+    gap: 2rem;
+    
+   
+  
+}
+.future-for::-webkit-scrollbar{
+    display: none;
+}
+
+.future-for .today{
+    transition: 850ms;
+    height: 150px;
+ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding:15px;
+    margin-left: 0%;
+    padding-right: 40px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.2)
+   
+}
+.future-for .today:hover{
+    transform: scale(1.2);
+    background: rgba(64, 64, 65, 0.864);
+}
+
+.future-for .today .w-icon{
+    
+        height: 80px;
+        width: 100px;
+        padding: 18px;
+    
+}
+.future-for .today .day{
+    background: rgb(31, 28, 28);
+    text-align: center;
+    border-radius: 12px;
+    padding: 5px 12px;
+}
+
+
+.future-for .weather-forecast{
+    display: flex;
+    gap: 2rem;
+   
+
+}
+.future-for .today .temp{
+    font-weight: 150;
+}
+
+.weather-forecast .weather-forecast-item{
+    transition: 850ms;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding:15px;
+   flex-direction: row;
+   height:auto;
+    padding-right: 40px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.2)
+    
+
+}
+.weather-forecast-item  .day{
+    background: rgb(31, 28, 28);
+    text-align: center;
+    border-radius: 12px;
+    padding: 5px 12px;
+}
+
+.weather-forecast-item .temp{
+    font-weight: 150;
+}
+
+.weather-forecast .weather-forecast-item:hover{
+    transform: scale(1.2);
+   
+    background: rgba(64, 64, 65, 0.864);
+   
+   
+}
+
+.weather-forecast .weather-forecast-item::-webkit-scrollbar{
+    display: none;
+}
+
+#gmap_canvas{
+    border-radius: 10px;
+    
+}
+
+
+#map{
+   
+    margin-top: 8%;
+    right: 0;
+    border-radius: 10px;
+    position:fixed;
+    height: 300px;
+    width: 40%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    
+   
+    margin-right: 2%;
+}
+#current-weather-items{
+    font-weight: 100;
+    background: rgba(0, 0, 0, 0.61);
+    margin-top: 5%;
+   
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding:15px;
+   flex-direction: row;
+   
+
+}
+
+.Search{
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    height: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 8px;
+    border: 0.5px solid #eee;
+    font-weight: 800;
+}
+#Search{
+    background:blue;
+    border: none;
+    height: 30px;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
+}
+#box2{
+    background: rgba(0, 0, 0, 0);
+    margin-top: 5%;
+   
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    font-weight: 400;
+    border-radius: 10px;
+    padding:15px;
+   flex-direction: row;
+}
+#country{
+    font-weight: 500;
+}
+#Search:hover{
+    background: rgb(103, 103, 236);
+}
+

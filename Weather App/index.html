@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App(Sharun)</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="data:image/jpeg;base64,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" type="image/x-icon">
+</head>
+
+<body>
+    <div id="container">
+        <div class="current-info">
+            <div class="date-con">
+                <div class="time" id="time">
+                    12:30 <span class="am-pm">PM</span>
+                </div>
+
+
+                <div class="date" id="date">
+                    Monday,24 May
+                </div>
+                <input type="Search" placeholder="Search Your City Forecast....." class="Search">
+                <button id="Search" onclick="myfunction()">Search</button>
+                <div class="other" id="current-weather-items">Weather By Your Loacation
+
+
+
+                </div>
+                <div id="box2">
+
+                </div>
+
+            </div>
+            <!-- <div class="weather-items">
+                <div>Humidity</div>
+                <div>
+                    95.5%
+                </div>
+            </div>
+            <div class="weather-items">
+                <div>Humidity</div>
+                <div>
+                    95.5%
+                </div>
+            </div>
+            <div class="weather-items">
+                <div>Pressure</div>
+                <div>
+                    121
+                </div>
+            </div>
+            <div class="weather-items">
+                <div>Wind Speed</div>
+                <div>
+                    222
+                </div>
+            </div> -->
+
+            <div id="map">
+                <div class="mapouter">
+                    <div class="gmap_canvas">
+                        <iframe width="100%" height="300" id="gmap_canvas"
+                            src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+
+                        </iframe>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+
+
+
+            <div class="place-con">
+                <div class="time-zone" id="timezone">Asia/Kolkata</div>
+                <div id="country" class="country">India </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="future-for">
+
+
+
+
+        <div class="weather-forecast" id="weather-forecast">
+            <div class="weather-forecast-item">
+                <div id="day2" class="day">Loading...</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <div class="temp">Loading...</div>
+                <div class="temp"></div>
+            </div>
+            <div class="weather-forecast-item">
+                <div id="day3" class="day">Loading...</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <div class="temp">Loading...</div>
+                <div class="temp"></div>
+            </div>
+            <div id="day4" class="weather-forecast-item">
+                <div class="day">Loading...</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <div class="temp">Loading...</div>
+                <div class="temp"></div>
+            </div>
+            <div id="day5" class="weather-forecast-item">
+                <div class="day">Loading...</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <div class="temp">Loading...</div>
+                <div class="temp"></div>
+            </div>
+            <div id="day6" class="weather-forecast-item">
+                <div class="day">Loading...</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <div class="temp">Loading...</div>
+                <div class="temp"></div>
+            </div>
+            <div id="day7" class="weather-forecast-item">
+                <div class="day">Loading...</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
+                <div class="temp">Loading...</div>
+                <div class="temp"></div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js"
+    integrity="sha512-x/vqovXY/Q4b+rNjgiheBsA/vbWA3IVvsS8lkQSX1gQ4ggSJx38oI2vREZXpTzhAv6tNUaX81E7QBBzkpDQayA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="moment.js"></script>
+<script src="index1.js"></script>
+<script>
+    var Api_Key = "daa6c54a51e6cf0f3157e8cd84312f4a"
+    var url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely,alerts&units=metric&appid=${Api_Key}`
+
+    //console.log(url)
+
+</script>
